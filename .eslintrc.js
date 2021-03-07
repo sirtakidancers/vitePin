@@ -1,21 +1,22 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
-    es2021: true,
   },
-  extends: [
-    'plugin:vue/essential',
-    'airbnb-base',
-  ],
   parserOptions: {
-    ecmaVersion: 12,
-    parser: '@typescript-eslint/parser',
+    parser: 'babel-eslint',
     sourceType: 'module',
   },
-  plugins: [
-    'vue',
-    '@typescript-eslint',
+  extends: [
+    'airbnb-base',
+    'plugin:vue/vue3-essential',
   ],
   rules: {
+    'comma-dangle': 'off',
+    'class-methods-use-this': 'off',
+    'import/no-unresolved': 'off',
+    'import/extensions': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'import/prefer-default-export': 'off',
   },
-};
+}

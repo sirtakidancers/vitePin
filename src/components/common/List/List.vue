@@ -2,12 +2,32 @@
   <ul>
     <li class="item" v-for="item in $store.getters.notDeleteList" :key="item.id">
       <span class="item-text" v-if="$store.state.changeItem?.id !== item.id">{{item.text}}</span>
-      <Input v-if="$store.state.changeItem?.id === item.id" :msg="$store.state.changeItem.text" :onChange="(value) => $store.dispatch('changeItemInput', value)"/>
+      <Input
+        v-if="$store.state.changeItem?.id === item.id"
+        :msg="$store.state.changeItem.text"
+        :onChange="(value) => $store.dispatch('changeItemInput', value)"
+      />
       <div v-if="$store.state.isEditMode">
-        <span v-if="$store.state.changeItem?.id === item.id" class="item-action item-action_remove" @click="$store.dispatch('cancelChangeItem', item.id)">отменить</span>
-        <span v-if="$store.state.changeItem?.id === item.id" class="item-action item-action_change" @click="$store.dispatch('saveChangeItem', item.id)">сохранить</span>
-        <span v-if="$store.state.changeItem === null" class="item-action item-action_remove" @click="$store.dispatch('removeItem', item.id)">удалить</span>
-        <span v-if="$store.state.changeItem === null" class="item-action item-action_change" @click="$store.dispatch('startChangeItem', item.id)">изменить</span>
+        <span
+          v-if="$store.state.changeItem?.id === item.id"
+          class="item-action item-action_remove"
+          @click="$store.dispatch('cancelChangeItem', item.id)"
+        >отменить</span>
+        <span
+          v-if="$store.state.changeItem?.id === item.id"
+          class="item-action item-action_change"
+          @click="$store.dispatch('saveChangeItem', item.id)"
+        >сохранить</span>
+        <span
+          v-if="$store.state.changeItem === null"
+          class="item-action item-action_remove"
+          @click="$store.dispatch('removeItem', item.id)"
+        >удалить</span>
+        <span
+          v-if="$store.state.changeItem === null"
+          class="item-action item-action_change"
+          @click="$store.dispatch('startChangeItem', item.id)"
+        >изменить</span>
       </div>
       <span v-if="!$store.state.isEditMode">{{item.date.toLocaleString('ru')}}</span>
     </li>
@@ -15,17 +35,15 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
-  import Input from '@components/common/Input'
-  import Button from '@components/common/Button'
+import { defineComponent } from 'vue';
+import Input from '@components/common/Input';
 
-  export default defineComponent({
-    name: 'List',
-    components: {
-      Input,
-      Button,
-    },
-  });
+export default defineComponent({
+  name: 'List',
+  components: {
+    Input,
+  },
+});
 </script>
 
 <style scoped>

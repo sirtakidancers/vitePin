@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
@@ -13,7 +13,7 @@
     "types": ["vite/client", ],
     "typeRoots": ["./node_modules/@types", "./typings/*.d.ts"],
     "paths": {
-      "@*": ["src/*"],
+      "@*": ["./*"],
     },
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]

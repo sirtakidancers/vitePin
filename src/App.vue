@@ -4,15 +4,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import Main from '@components/pages/Main'
+import { defineComponent } from 'vue';
+import Main from '@components/pages/Main';
 
 export default defineComponent({
   name: 'App',
   components: {
     Main
   }
-})
+});
 </script>
 
 <style>

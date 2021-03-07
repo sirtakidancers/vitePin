@@ -1,0 +1,22 @@
+{
+  "eslint.options": {
+      "configFile": "/Users/alexantipin/projects/vitePin/.eslintrc.js"
+  },
+  "eslint.workingDirectories": [ "/Users/alexantipin/projects/vitePin/src" ],
+  "prettier.configPath": "/Users/alexantipin/projects/vitePin/.prettier",
+  "eslint.format.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "vetur.validation.template": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSave": false,
+  "files.eol": "\n"
+}
